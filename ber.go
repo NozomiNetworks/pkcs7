@@ -43,6 +43,8 @@ func (p asn1Primitive) EncodeTo(out *bytes.Buffer) error {
 		return err
 	}
 
+	out.Write(p.content)
+
 	return nil
 }
 
